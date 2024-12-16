@@ -31,6 +31,19 @@ import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
 public class WebUIStaticResource
 {
     @GET
+    @Path("header-logo.png")
+    public Response getHeaderLogo(@Context ServletContext servletContext)
+            throws IOException
+    {
+        String fullPath = "/static/header-logo.png";
+        URL resource = getClass().getResource(fullPath);
+        if (resource == null) {
+            return Response.status(NOT_FOUND).build();
+        }
+        return Response.ok(resource.openStream(), servletContext.getMimeType(resource.toString())).build();
+    }
+
+    @GET
     @Path("logo.svg")
     public Response getLogo(@Context ServletContext servletContext)
             throws IOException

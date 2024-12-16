@@ -41,7 +41,7 @@ export function Login() {
       <div className={styles.login}>
         <div className={styles.component66}>
           <img
-            src="/trino-gateway/logo.svg"
+            src="/trino-gateway/header-logo.png"
             className={styles.logo}
           />
           <div className={styles.header}>
