@@ -1,5 +1,23 @@
 # Release notes
 
+## Trino Gateway 14 (xx Jan 2025) { id="14" }
+
+Artifacts:
+
+* [JAR file gateway-ha-14-jar-with-dependencies.jar](https://repo1.maven.org/maven2/io/trino/gateway/gateway-ha/14/gateway-ha-14-jar-with-dependencies.jar)
+* Container image `trinodb/trino-gateway:14`
+* Source code as
+  [tar.gz](https://github.com/trinodb/trino-gateway/archive/refs/tags/14.tar.gz)
+  or [zip](https://github.com/trinodb/trino-gateway/archive/refs/tags/14.zip)
+* Helm chart `1.14.0` in `helm/trino-gateway` of the tagged source code
+
+Changes:
+
+* Add support for automatic database schema validation and upgrade during Trino Gateway startup.
+  ([#575](https://github.com/trinodb/trino-gateway/pull/575))
+* Improve performance of Trino cluster stats collection and add a timeout configuration.
+  ([#583](https://github.com/trinodb/trino-gateway/pull/583))
+
 ## Trino Gateway 13 (3 Dec 2024) { id="13" }
 
 Artifacts:
